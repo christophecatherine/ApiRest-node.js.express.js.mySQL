@@ -1,0 +1,90 @@
+# ApiRest-node.js.express.js.mySQL
+//install
+install node.js v14 : 
+wget -qO- https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt install -y nodejs
+
+install package json : 
+npm init 
+
+//script dans le terminal
+scrit pour lancer start :
+"scripts": {"start": "node app.js"},
+
+install express.js :
+npm install express --save
+
+on configure Express : 
+// on récupere express dans notre code 
+const express = require('express')
+
+// on creer une instance de l'application express (server web sur laquel va fonctionner notre api rest)
+const app = express()
+
+// port sur lequel on va demarer notre api
+const port = 3000
+
+// point de terminaison de l'API
+app.get('/', (req, res) => res.send('Hello Express !'))
+
+// on demare lAPI sur le port 3000 avec un message dans le terminal grace a listen d'express 
+app.listen(port, () => console.log(`Notre application Node est démarrée sur : http://localhost:${port}`))
+
+on execute notre API :
+npm run start
+
+install nodemon :
+npm install nodemon --save-dev
+
+nouveau script pour demarer l'API :
+"scripts": {"start": "nodemon app.js"},
+
+on redemare l'API : 
+npm run start
+
+Pour ${id} ne pas oublier de mettre le guillemets inverse `` altGr+7
+doc :  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+
+Pour définir un nouveau endpoint avec Express
+propriété params de la requête entrante.
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template_literals
+
+Renvoyer une reponse http au format json avec la variable pokemon
+res.json(pokemon)
+
+Embellir la reponse du navigateur au forma json 
+installer sous chrome json viewer 
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related
+
+Pour retourner une réponse HTTP au format JSON, on utilise la méthode json() fournie par Express. Cette méthode s’occupe pour nous de structurer nos données au format JSON, et d’attribuer le type MIME application/json dans la requête de retour.
+
+Scrit "methode succes" dans un fichier helper avec un message et les données pour le consomateur et on export le message avec module helper d'express
+
+Une réponse HTTP est constituée de 3 éléments distincts : les données au format JSON, le type MIME application/json, et enfin le code de statut HTTP.
+
+Middleware liste de quelques : https://github.com/senchalabs/connect#middleware
+Doc express4 Middleware : https://expressjs.com/en/resources/middleware.html
+
+Insatll middleware morgan : npm install morgan --save-dev
+Istall middleware favicon : npm install serve-favicon --save (pour faire apparatre le petit icon)
+
+On peut catégoriser les Middlewares en cinq catégories différentes : les Middlewares d’application, les Middlewares du router, ceux du traitement d’erreurs, ceux intégrés, et enfin les Middlewares tiers.
+
+Pour mettre en place un Middleware dans notre API Rest, il faut faire appel à la méthode use() d’Express.
+
+L’utilisation de la méthode next() est très importante pour indiquer à Express que le traitement du Middleware courant est terminé, et que l’on peut passer au Middleware suivant.
+
+L’ordre de déclaration des Middlewares a une importance. Il faut être particulièrement attentif si certains traitements doivent être effectués avant d’autres, et ajuster l’ordre de déclaration des Middlewares en conséquence.
+
+Install Insomnia pour Ubuntu
+https://insomnia.rest/download
+creer une nouvelle requete et on l'a nomme GET/pokemons
+ensuite on tape notre URL : http://localhost:3000/api/pokemons et send 
+Requete post on recupere nos données que l'on copy dans la requete post et send
+Requete put on modifie nos données 
+Requete delete on supprime une donnée
+
+ 
+
+
