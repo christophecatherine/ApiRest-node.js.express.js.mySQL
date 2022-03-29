@@ -85,6 +85,32 @@ Requete post on recupere nos données que l'on copy dans la requete post et send
 Requete put on modifie nos données 
 Requete delete on supprime une donnée
 
+XAMPP est un ensemble de logiciels cross-plateform, qui permet d’installer une base de données SQL sur son poste de travail.
+
+phpMyADmin est une application web permettant d’interagir avec notre base de données directement depuis un navigateur.
+
+Un ORM, ou "Object-Relational Mapping", est une technique de programmation puissante qui permet d’interagir avec une base de données via de simples langages comme le JavaScript.
+
+L’utilisation d’un ORM a de nombreux avantages : pas besoin de maîtriser le langage de requêtes SQL, couche d’abstraction par rapport à la base de données utilisées en arrière-plan, requêtes basiques et avancées prête à l’emploie pour accéder à nos données, etc.
+
+Sequelize est un ORM destiné aux développeurs Node.js, et aux utilisateurs d’une base de données SQL.
+
+Sequelize est entièrement basé sur les Promises pour la gestion des traitements asynchrones, ce qui évite d’utiliser le code verbeux des callbacks.
+
+Sequelize fonctionne avec un système de drivers, afin de pouvoir se connecter à une base de données spécifique. Il est donc important de bien installer un driver en complément d’un ORM.
+
+Sequelize est entièrement construit sur le mécanisme des modèles. Il est donc nécessaire de bien comprendre ce fonctionnement avant d’aller plus loin avec Sequelize.
+
+Un modèle est une abstraction qui représente une table dans notre base de données. On peut retenir l’équation suivante : 1 modèle Sequelize = 1 table en base de donnée.
+
+Une fois les modèles déclarés auprès de Sequelize, il est nécessaire de demander à Sequelize de synchroniser ces modèles avec la base de données sous-jacente, grâce à la méthode sync().
+
+Pour ajouter des lignes à une table en base de données, il faut créer de nouvelles instances d’un modèle avec la méthode create().
+
+Sequelize permet d’interagir très simplement avec une base de données et de mettre en place les opérations CRUD : findAll, findByPk, create, update, destroy.
+
+Sequelize permet de définir des getters et des setters sur les modèles, qui sont très utile pour attacher des traitements supplémentaires avec peu de code supplémentaire.
+
  
 
 
