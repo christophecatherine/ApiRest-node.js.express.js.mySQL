@@ -17,6 +17,7 @@
         "mariadb": "^2.5.4",
         "sequelize": "^6.6.5",
         "serve-favicon": "^2.5.0",
+        "stack-trace": "^1.0.0-pre1",
         "to": "^0.2.9",
         "update": "^0.7.4"
     },
