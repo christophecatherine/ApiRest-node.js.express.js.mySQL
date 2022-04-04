@@ -18,7 +18,7 @@ const port = process.env.PORT || 3000
 // middleware use de favicon pour faire apparaitre l'icon
 // middleware use body-parser
 app
-    .use(favicon(__dirname + '/favicon.ico'))
+// .use(favicon(__dirname + '/favicon.ico'))
     .use(express.json())
 
 // on appelle notre methode init db
