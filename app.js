@@ -2,7 +2,7 @@
 const express = require('express')
 
 // on import le pack favicon
-const favicon = require('serve-favicon')
+// const favicon = require('serve-favicon')
 
 // on import le pack body-parser
 const bodyParser = require('body-parser')
