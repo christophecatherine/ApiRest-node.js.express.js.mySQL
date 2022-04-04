@@ -16,7 +16,6 @@ const app = express()
 const port = process.env.PORT || 3000
 
 // middleware use de favicon pour faire apparaitre l'icon
-// middleware use de morgan pour debegguer la fase de developpement des requetes HTTP
 // middleware use body-parser
 app
     .use(favicon(__dirname + '/favicon.ico'))
