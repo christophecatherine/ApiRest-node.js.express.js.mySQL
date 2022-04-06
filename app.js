@@ -12,7 +12,8 @@ const sequelize = require('./src/db/sequelize')
 
 // on creer une instance de l'application express (server web sur laquel va fonctionner notre api rest)
 const app = express()
-    // port sur lequel on va demarer notre api
+
+// port sur lequel on va demarer notre api
 const port = process.env.PORT || 3000
 
 // middleware use de favicon pour faire apparaitre l'icon
