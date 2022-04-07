@@ -7,8 +7,8 @@ const bcrypt = require('bcrypt')
 let sequelize
 
 if (process.env.NODE_ENV === 'production') {
-    sequelize = new Sequelize('pokedex', 'root', '', {
-        host: 'localhost',
+    sequelize = new Sequelize('czdwdk89gtgyc5lf', 't8ye54rfia9oqv98', 'hv2wupd6pnscsuqr', {
+        host: '	uyu7j8yohcwo35j3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         dialect: 'mariadb',
         dialectOptions: {
             timezone: 'Etc/GMT-2',
