@@ -7,8 +7,8 @@ const bcrypt = require('bcrypt')
 let sequelize
 
 if (process.env.NODE_ENV === 'production') {
-    const sequelize = new Sequelize('czdwdk89gtgyc5lf', 't8ye54rfia9oqv98', 'hv2wupd6pnscsuqr', {
-        host: 'uyu7j8yohcwo35j3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    sequelize = new Sequelize('pokedex', 'root', '', {
+        host: 'localhost',
         dialect: 'mariadb',
         dialectOptions: {
             timezone: 'Etc/GMT-2',
@@ -24,16 +24,15 @@ if (process.env.NODE_ENV === 'production') {
         },
         logging: false
     })
+
 }
-
-
 
 // on instancie les models auprès de sequelize
 const Pokemon = PokemonModel(sequelize, DataTypes)
 const User = UserModel(sequelize, DataTypes)
 
 const initDb = () => {
-    return sequelize.sync().then(_ => {
+    return sequelize.sync({ force: true }).then(_ => {
         pokemons.map(pokemon => {
             Pokemon.create({
                 name: pokemon.name,
