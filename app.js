@@ -10,6 +10,9 @@ const bodyParser = require('body-parser')
 // on import le pack sequelize
 const sequelize = require('./src/db/sequelize')
 
+// on import cors
+const cors = require('cors')
+
 // on creer une instance de l'application express (server web sur laquel va fonctionner notre api rest)
 const app = express()
 
@@ -21,6 +24,7 @@ const port = process.env.PORT || 3000
 app
 // .use(favicon(__dirname + '/favicon.ico'))
     .use(express.json())
+    .use(cors())
 
 // on appelle notre methode init db
 sequelize.initDb()
