@@ -19,7 +19,7 @@
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
         "mariadb": "^2.5.4",
-        "sequelize": "^6.6.5",
+        "sequelize": "^6.35.1",
         "serve": "^13.0.2",
         "stack-trace": "^1.0.0-pre1",
         "to": "^0.2.9",
